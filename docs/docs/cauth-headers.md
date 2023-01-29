@@ -46,7 +46,7 @@ const storage = {
 And this is how you'd use it on react-native:
 
 ```jsx
-import { AsyncStorage } from 'react-native'
+import AsyncStorage from '@react-native-community/async-storage'
 
 <CroodsProvider headers={authHeaders({ storage: AsyncStorage })}>
   <MyApp />
@@ -83,7 +83,7 @@ And this is how you'd use it on react-native:
 
 ```jsx
 import { saveHeaders } from 'croods-auth'
-import { AsyncStorage } from 'react-native'
+import AsyncStorage from '@react-native-community/async-storage'
 
 <CroodsProvider handleResponseHeaders={({ headers }) => {
   saveHeaders(headers, { storage: AsyncStorage })
@@ -99,7 +99,8 @@ So, joining the two methods above is the solution for handling the saving and re
 
 ```jsx
 import { authHeaders, saveHeaders } from 'croods-auth'
-import { AsyncStorage } from 'react-native'
+import AsyncStorage from '@react-native-community/async-storage'
+
 
 const options = {
   storage: AsyncStorage,
